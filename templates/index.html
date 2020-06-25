@@ -28,7 +28,7 @@
   <main id="mutagen_container">
     <section id="header">
       <section id="title">
-        <h1><span>Markov</span>Mutagen</h1>
+        <h1><span>Cybernetherworld</span></h1>
       </section>
       <section id="subtitle">
         <section id="quote_container">
@@ -211,143 +211,28 @@
         </ul>
         <div class="tab-content" class="form-control">
           <div id="inputtab1" class="tab-pane fade active show" class="form-control">
-            <textarea cols=78 rows=15 id=input placeholder="Paste, write, or refine input here."></textarea>
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
           </div>
           <div id="inputtab2" class="tab-pane fade">
-            <textarea cols=78 rows=15 id=input placeholder="Paste, write, or refine input here."></textarea>
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
           </div>
           <div id="inputtab3" class="tab-pane fade">
-            <textarea cols=78 rows=15 id=input placeholder="Paste, write, or refine input here."></textarea>
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
           </div>
           <div id="inputtab4" class="tab-pane fade">
-            <textarea cols=78 rows=15 id=input placeholder="Paste, write, or refine input here."></textarea>
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
           </div>
           <div id="inputtab5" class="tab-pane fade">
-            <textarea cols=78 rows=15 id=input placeholder="Paste, write, or refine input here."></textarea>
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
           </div>
           <div id="inputtab6" class="tab-pane fade">
-            <textarea cols=78 rows=15 id=input placeholder="Paste, write, or refine input here."></textarea>
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
           </div>
         </div>
 
       </section>
       <section id="empty-test">
         <section id="options_container">
-          <section id="include-input-container">
-            <label for="input-selection">Select Inputs:</label><br>
-            <section id="input_selector_container">
-              <label class="b-contain">
-                <input type="checkbox" id="include_input_1" name="include_inputs" value=1 checked />
-                <label for="include_input_1">
-                  <span>1</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-              <label class="b-contain">
-                <input type="checkbox" id="include_input_2" name="include_inputs" value=2 />
-                <label for="include_input_2">
-                  <span>2</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-              <label class="b-contain">
-                <input type="checkbox" id="include_input_3" name="include_inputs" value=3 />
-                <label for="include_input_3">
-                  <span>3</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-              <label class="b-contain">
-                <input type="checkbox" id="include_input_4" name="include_inputs" value=4 />
-                <label for="include_input_4">
-                  <span>4</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-              <label class="b-contain">
-                <input type="checkbox" id="include_input_5" name="include_inputs" value=5 />
-                <label for="include_input_5">
-                  <span>5</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-              <label class="b-contain">
-                <input type="checkbox" id="include_input_6" name="include_inputs" value=6 />
-                <label for="include_input_6">
-                  <span>6</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-            </section>
-          </section>
-          <section id="technique_selector_container">
-            <label for="technique_selector">Technique:</label><br>
-            <section id="selectors" class="form-check">
-              <label class="b-contain">
-                <label for="markov"><span>Markov</span></label><br>
-                <input type="radio" id="markov" name="technique_selector" checked>
-                <div class="b-input"></div>
-              </label><br>
-              <label class="b-contain">
-                <label for="cutup"><span>Cut-up</span></label><br>
-                <input type="radio" id="cutup" name="technique_selector">
-                <div class="b-input"></div>
-              </label><br>
-            </section>
-            <section id="markov_ngram_size_container">
-              <label for="ngram_selector">n-gram Size:</label><br>
-              <section id="ngram_selector">
-                <label class="b-contain">
-                  <input id="n-gram_size_1" type="radio" class="markov_ngram_size" type="number" value=1
-                    name="ngram_selector" checked />
-                  <label for="n-gram_size_1">
-                    <span>1</span>
-                  </label>
-                  <div class="b-input"></div>
-                </label>
-                <label class="b-contain">
-                  <input id="n-gram_size_2" type="radio" class="markov_ngram_size" type="number" value=2
-                    name="ngram_selector" />
-                  <label for="n-gram_size_2">
-                    <span>2</span>
-                  </label>
-                  <div class="b-input"></div>
-                </label>
-                <label class="b-contain">
-                  <input id="n-gram_size_3" type="radio" class="markov_ngram_size" type="number" value=3
-                    name="ngram_selector" />
-                  <label for="n-gram_size_3">
-                    <span>3</span>
-                  </label>
-                  <div class="b-input"></div>
-                </label>
-              </section>
-            </section>
-            <section id="cutup_block_size_container" class="d-none">
-              Block Size Between:<br>
-              <input id="cutup_block_size" class="cutup_block_size_min" type="number" value=2 /> and <input
-                id="cutup_block_size" class="cutup_block_size_max" type='number' value=5 /> words
-            </section>
-          </section>
-          <section id="output_format_container">
-            <label for="output_format">Format:</label>
-            <section id="selectors" class="form-check">
-              <label class="b-contain">
-                <input id="prose" type="radio" class="output_format" value="prose" name="output_format" checked />
-                <label for="prose">
-                  <span>Prose</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-              <label class="b-contain">
-                <input type="radio" class="output_format" id="aphorisms" value="aphorisms" name="output_format" />
-                <label for="aphorisms">
-                  <span>Aphorisms</span>
-                </label>
-                <div class="b-input"></div>
-              </label>
-            </section>
-          </section>
           <section id="generate_text_container">
             <label for="generate_text"><button name="generate_text" id="generate_text" type="button">Generate
                 Text</button></label><br>
@@ -367,27 +252,27 @@
         </ul>
         <div class="tab-content">
           <div id="outputtab1" class="tab-pane fade in active show">
-            <textarea cols=78 rows=15 id=input
+            <textarea cols=78 rows=20 id=input
               placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
           </div>
           <div id="outputtab2" class="tab-pane fade in">
-            <textarea cols=78 rows=15 id=input
+            <textarea cols=78 rows=20 id=input
               placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
           </div>
           <div id="outputtab3" class="tab-pane fade in">
-            <textarea cols=78 rows=15 id=input
+            <textarea cols=78 rows=20 id=input
               placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
           </div>
           <div id="outputtab4" class="tab-pane fade in">
-            <textarea cols=78 rows=15 id=input
+            <textarea cols=78 rows=20 id=input
               placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
           </div>
           <div id="outputtab5" class="tab-pane fade in">
-            <textarea cols=78 rows=15 id=input
+            <textarea cols=78 rows=20 id=input
               placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
           </div>
           <div id="outputtab6" class="tab-pane fade in">
-            <textarea cols=78 rows=15 id=input
+            <textarea cols=78 rows=20 id=input
               placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
           </div>
         </div>

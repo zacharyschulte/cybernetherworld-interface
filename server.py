@@ -11,7 +11,7 @@ from generativepoetry.decomposer import get_gutenberg_document, get_internet_arc
 from gutenberg.query import get_metadata
 from flask import jsonify
 from formatter import *
-
+import requests
 app = Flask(__name__)
 
 
@@ -64,13 +64,22 @@ def upload_document_route():
 @app.route("/markov", methods=['POST'])
 def markov():
     cleaned_input = request.get_json()['input']
-    # cleaned_input = clean(request.get_data().decode(encoding='UTF-8'))
-    ngram_size = int(request.args.get('ngram_size'))
-    output_format = request.args.get('output_format')
-    output = " ".join(markov_technique(cleaned_input, ngram_size=ngram_size, num_output_sentences=13))
-    if output_format == 'aphorisms':
-        output = format_aphorisms(output)
-    return jsonify(output=output)
+    cleaned_input = clean(request.get_data().decode(encoding='UTF-8'))
+    # ngram_size = int(request.args.get('ngram_size'))
+    # output_format = request.args.get('output_format')
+    # output = " ".join(markov_technique(cleaned_input, ngram_size=ngram_size, num_output_sentences=13))
+    # if output_format == 'aphorisms':
+    #     output = format_aphorisms(output)
+    # return jsonify(output=output)
+    headers = {
+        'Authorization': 'Bearer 15d8e223-d76e-419d-8196-0e91fd48c3d6',
+        'Content-Type': 'application/json',
+    }
+    data = '{"prompt": {"text": "' + cleaned_input + '"},"length": 300}'
+    response = requests.post('https://api.inferkit.com/v1/models/ca81eeb1-df94-4403-aab0-569923f4d354/generate',
+                             headers=headers, data=data)
+    return response.json()
+
 
 
 @app.route("/cutup", methods=['POST'])

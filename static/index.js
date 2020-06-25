@@ -53,7 +53,7 @@ onload = function () {
                 .then((data) => {
                     var active_output_parent_id = document.querySelector("#output_tab_list").querySelector("a.nav-link.active").getAttribute("href");
                     var active_output = document.querySelector(active_output_parent_id).querySelector("textarea");
-                    active_output.value = data['output'];
+                    active_output.value = text_to_process + data['data']['text'];
                     generate_text_button.disabled = false;
                     save_button.disabled = false;
                 });

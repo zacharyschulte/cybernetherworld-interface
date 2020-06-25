@@ -103,14 +103,15 @@
     display:flex;
     flex-flow: column;
     margin: 1em 0 1em 0;
-    min-height: 80vh;
+    min-height: 40vh;
+    height: 40vh;
     }
   
   @media only screen and (min-width: 768px){
     #input_container, #output_container {
       width: 35vw;
       margin: .5em;
-      min-height: 80vh;
+      min-height: 40vh;
       height: 100%;
     }
   }
@@ -300,7 +301,6 @@
     text-align: justify;
     padding: 1em;
     height: 100%;
-    min-height: 40em;
     width:100%;
     resize: none; 
     position:relative;
@@ -624,7 +624,6 @@ outline: thin dotted;
 }
 
 #input_container div:nth-of-type(n+0), #output_container div:nth-of-type(n+0) {
-  height: 80vh;
   min-height: 40em;
 }
 
