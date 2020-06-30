@@ -10,7 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libhunspell-dev hunspell-e
 RUN fc-cache
 RUN python3 -m pip install gutenberg
 COPY update_cache.py update_cache.py
-RUN python3 update_cache.py
+# RUN python3 update_cache.py
 COPY requirements.txt /usr/src/app/
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install --no-cache-dir -r requirements.txt --src /usr/local/src

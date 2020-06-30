@@ -47,8 +47,59 @@
       </section>
     </section>
     <section id="body_container">
-      <section id="empty-test">
-        <section id="sampler_container">
+
+      <p>This neural network text generator was trained on the works of Symbolists, Surrealists, Dadaists, Buddhists,
+        ecologists, and sci-fi authors. It is based on GPT-2 and Adam King’s Inferkit model and will continue generating
+        text for any input with florid language describing things such as haunted shipwrecks, alluding to Greek
+        mythology, or seeming to address the nature of its own cybernetic writing if you provide a prompt about art and
+        automatons. Enjoy.</p>
+
+      <section id="input_container">
+        <!-- <h3>Inputs</h3> -->
+        <!-- <ul id="input_tab_list" class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#inputtab1">1</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab2">2</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab3">3</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab4">4</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab5">5</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab6">6</a></li>
+        </ul> -->
+        <div class="tab-content" class="form-control">
+          <div id="inputtab1" class="tab-pane fade active show" class="form-control">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <!-- <div id="inputtab2" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+
+          </div>
+          <div id="inputtab3" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <div id="inputtab4" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <div id="inputtab5" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <div id="inputtab6" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div> -->
+        </div>
+
+      </section>
+      <section id="buttons_container">
+        <section id="generate_text_container">
+          <label for="generate_text"><button name="generate_text" id="generate_text" type="button">Generate
+              Text</button></label><br>
+        </section>
+        <section id="continue_generation_container">
+          <label for="continue_generation"><button name="continue_generation" id="continue_generation"
+              type="button">Continue
+              Generation</button></label><br>
+        </section>
+      </section>
+      <!-- <section id="empty-test">
+        <!-- <section id="sampler_container">
           <section id="sampler_source_container">
             <label for="sampler_selector">Sample Source:</label>
             <section id="selectors" class="form-check">
@@ -197,50 +248,13 @@
           <section id="sampler_button_container">
             <button name="sample_button" id="sample_button" type="button">Sample</button>
           </section>
-        </section>
-      </section>
-      <section id="input_container">
-        <h3>Inputs</h3>
-        <ul id="input_tab_list" class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
-          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#inputtab1">1</a></li>
-          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab2">2</a></li>
-          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab3">3</a></li>
-          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab4">4</a></li>
-          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab5">5</a></li>
-          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab6">6</a></li>
-        </ul>
-        <div class="tab-content" class="form-control">
-          <div id="inputtab1" class="tab-pane fade active show" class="form-control">
-            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
-          </div>
-          <div id="inputtab2" class="tab-pane fade">
-            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
-          </div>
-          <div id="inputtab3" class="tab-pane fade">
-            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
-          </div>
-          <div id="inputtab4" class="tab-pane fade">
-            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
-          </div>
-          <div id="inputtab5" class="tab-pane fade">
-            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
-          </div>
-          <div id="inputtab6" class="tab-pane fade">
-            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
-          </div>
-        </div>
+        </section> -->
 
-      </section>
-      <section id="empty-test">
-        <section id="options_container">
-          <section id="generate_text_container">
-            <label for="generate_text"><button name="generate_text" id="generate_text" type="button">Generate
-                Text</button></label><br>
-          </section>
-        </section>
-      </section>
+      <!-- <section id="options_container">
+        </section> -->
+
       <section id="output_container">
-        <h3>Outputs</h3>
+        <!-- <h3>Outputs</h3> -->
         <ul id="output_tab_list" class="nav nav-tabs nav-justified">
           <li class="nav-item" class="active"><a class="nav-link active" data-toggle="tab" href="#outputtab1">A</a>
           </li>
@@ -289,7 +303,7 @@
       </section>
 
     </section>
-    <section id="blurb_container">
+    <!-- <section id="blurb_container">
       <figure id="blurb">
         <h2>About Markov Chains</h2>
         <hr>
@@ -392,7 +406,7 @@
         </p>
         <hr>
       </figure>
-    </section>
+    </section> -->
     <section id="footer">
       <section id="footer_text">
         2020 | Python by <a href="https://github.com/coreybobco/">Corey Bobco</a> |
