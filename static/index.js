@@ -23,7 +23,7 @@ onload = function () {
         var text_to_process = "";
         var tab_id = '#inputtab1';
 
-        text_to_process += document.querySelector(tab_id).querySelector("textarea").value + " ";
+        text_to_process += document.querySelector(tab_id).querySelector("textarea").value;
 
         if (text_to_process.length > 2) {
             generate_text_button.disabled = true;
@@ -46,7 +46,7 @@ onload = function () {
         var active_output_parent_id = document.querySelector("#output_tab_list").querySelector("a.nav-link.active").getAttribute("href");
         var active_output = document.querySelector(active_output_parent_id).querySelector("textarea");
 
-        text_to_process += active_output.value + " ";
+        text_to_process += active_output.value;
 
         if (text_to_process.length > 2) {
             continue_generation_button.disabled = true;
