@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/notcouriersans" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Almendra+Display&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+  <link rel="manifest" href="static/site.webmanifest">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="static/index.js"></script>
+  <link rel="stylesheet" href="static/index.css">
+</head>
+
+<body>
+  <main id="mutagen_container">
+    <section id="header">
+      <section id="title">
+        <h1><span>Cybernetherworld</span></h1>
+      </section>
+      <section id="subtitle">
+        <section id="quote_container">
+          <figure id="quotation">
+            <p>“The true literature machine will be one that itself feels the need to produce <span>disorder</span>, as
+              a reaction
+              against its
+              preceding production of order: a machine that will produce avant-garde work to free its circuits when they
+              are choked by
+              too long a procession of classicism.”</p>
+          </figure>
+          <figcaption id="attribution">
+            — Italo Calvino, Cybernetics and Ghosts (1967)
+          </figcaption>
+        </section> <br>
+      </section>
+    </section>
+    <section id="body_container">
+
+      <p>This neural network text generator was trained on the works of Symbolists, Surrealists, Dadaists, Buddhists,
+        ecologists, and sci-fi authors. It is based on GPT-2 and Adam King’s Inferkit model and will continue generating
+        text for any input with florid language describing things such as haunted shipwrecks, alluding to Greek
+        mythology, or seeming to address the nature of its own cybernetic writing if you provide a prompt about art and
+        automatons. Enjoy.</p>
+
+      <section id="input_container">
+        <!-- <h3>Inputs</h3> -->
+        <!-- <ul id="input_tab_list" class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#inputtab1">1</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab2">2</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab3">3</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab4">4</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab5">5</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inputtab6">6</a></li>
+        </ul> -->
+        <div class="tab-content" class="form-control">
+          <div id="inputtab1" class="tab-pane fade active show" class="form-control">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <!-- <div id="inputtab2" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+
+          </div>
+          <div id="inputtab3" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <div id="inputtab4" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <div id="inputtab5" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div>
+          <div id="inputtab6" class="tab-pane fade">
+            <textarea cols=78 rows=10 id=input placeholder="Paste, write, or refine input here."></textarea>
+          </div> -->
+        </div>
+
+      </section>
+      <section id="buttons_container">
+        <section id="generate_text_container">
+          <label for="generate_text"><button name="generate_text" id="generate_text" type="button">Generate
+              Text</button></label><br>
+        </section>
+        <section id="continue_generation_container">
+          <label for="continue_generation"><button name="continue_generation" id="continue_generation"
+              type="button">Continue
+              Generation</button></label><br>
+        </section>
+      </section>
+      <!-- <section id="empty-test">
+        <!-- <section id="sampler_container">
+          <section id="sampler_source_container">
+            <label for="sampler_selector">Sample Source:</label>
+            <section id="selectors" class="form-check">
+              <label class="b-contain">
+                <label for="library"><span>Library</span></label><br>
+                <input type="radio" id="library" name="sampler_selector" checked>
+                <div class="b-input"></div>
+              </label><br>
+              <label class="b-contain">
+                <label for="upload"><span>Upload</span></label><br>
+                <input type="radio" id="upload" name="sampler_selector">
+                <div class="b-input"></div>
+              </label><br>
+              <label class="b-contain">
+                <label for="url"><span>URL</span></label><br>
+                <input type="radio" id="url" name="sampler_selector">
+                <div class="b-input"></div>
+              </label><br>
+              <label class="b-contain">
+                <label for="random"><span>Random</span></label><br>
+                <input type="radio" id="random" name="sampler_selector">
+                <div class="b-input"></div>
+              </label><br>
+            </section>
+            <section id="sampler_type_container">
+              <section id="library_select_container">
+                <section class="input-group mb-3">
+                  <select class="custom-select" id="library_selection">
+                    <option selected value="http://www.gutenberg.org/ebooks/11">Alice in Wonderland</option>
+                    <option value="http://www.gutenberg.org/files/2148/2148-0.txt">Complete Works of Poe</option>
+                    <option value="http://www.gutenberg.org/ebooks/844">The Importance of Being Earnest</option>
+                    <option value="http://www.gutenberg.org/ebooks/1635">Ion by Plato</option>
+                    <option value="http://www.gutenberg.org/ebooks/2701">Moby Dick</option>
+                    <option
+                      value="https://archive.org/stream/DisciplinePunishTheBirthOfThePrison/Discipline%20%26%20Punish-The%20Birth%20of%20the%20Prison_djvu.txt">
+                      Discipline and Punish</option>
+                    <option value="http://www.gutenberg.org/ebooks/5434">Transcendental Gastronomy
+                    </option>
+                  </select>
+                </section>
+                <p>Choose a document from our library.</p>
+              </section>
+
+              <section id="fileSelect-container" class="d-none">
+                <button name="upload_text" type="button" id="upload_button"><label id="fileSelect" for="fileElem"><svg
+                      class="bi bi-upload" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M.5 8a.5.5 0 01.5.5V12a1 1 0 001 1h12a1 1 0 001-1V8.5a.5.5 0 011 0V12a2 2 0 01-2 2H2a2 2 0 01-2-2V8.5A.5.5 0 01.5 8zM5 4.854a.5.5 0 00.707 0L8 2.56l2.293 2.293A.5.5 0 1011 4.146L8.354 1.5a.5.5 0 00-.708 0L5 4.146a.5.5 0 000 .708z"
+                        clip-rule="evenodd" />
+                      <path fill-rule="evenodd" d="M8 2a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 018 2z"
+                        clip-rule="evenodd" />
+                    </svg> .epub or
+                    .txt file</label></button>
+                <input type="file" id="fileElem" accept=".epub,.txt" class="visually-hidden">
+                <p>Search for .epub files on <a href="https://monoskop.org/Library_Genesis" target=blank>Library
+                    Genesis</a></p>
+              </section>
+
+              <section id="url-container" class="d-none">
+                <section class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="form-control" class="input-group-text" id="basic-addon3">URL:</span>
+                  </div>
+                  <input type="text" class="form-control" id="sample_source_url" aria-describedby="basic-addon3">
+                </section>
+                <p>Add a Project Gutenburg or Archive.org url.</p>
+
+              </section>
+
+              <section id="random-container" class="d-none">
+                <span style="font-size: x-large; color: #2CB32C">⚅⚄⚃⚂⚁⚀</span>
+                <p>Use a random Project Gutenburg document.</p>
+
+              </section>
+            </section>
+          </section>
+
+
+          <section id="sampler_size_container">
+            <label for="sample_size_selector">Sample Size:</label><br>
+            <section id="sample_size_selector">
+              <section id="selectors" class="form-check">
+                <section>
+
+                  <label class="b-contain">
+
+                    <label for="sample_selector_document">
+                      <span>Entire Document</span>
+                    </label><br>
+
+                    <input id="document" type="radio" class="sample_size" value=1 name="sample_size_selector" checked>
+
+                    <div class="b-input"></div>
+
+                    </input>
+                  </label><br>
+
+
+                  <label class="b-contain">
+
+                    <label for="sample_selector_paragraph">
+                      <span>Paragraphs</span>
+                    </label><br>
+
+                    <input id="paragraph" type="radio" class="sample_size" value=2 name="sample_size_selector">
+                    <div class="b-input"></div>
+                  </label><br>
+
+
+                  <label class="b-contain">
+
+                    <label for="sample_selector_sentence">
+                      Sentences</span>
+                    </label><br>
+
+                    <input id="sentence" type="radio" class="sample_size" value=3 name="sample_size_selector">
+
+                    <div class="b-input"></div>
+                  </label><br>
+
+
+                </section>
+              </section>
+
+
+
+
+            </section>
+          </section>
+          <section id="sample_size_container">
+            <section id="document-size">
+              <p>Use entire document.</p>
+            </section>
+            <section class="d-none" id="paragraph-size">
+
+              <input id="sample_size_paragraph" type="number" value=2 /> random paragraphs
+
+            </section>
+            <section class="d-none" id="sentence-size">
+
+              <input id="sample_size_sentence" type="number" value=2 /> random sentences
+
+            </section>
+          </section>
+          <section id="sampler_button_container">
+            <button name="sample_button" id="sample_button" type="button">Sample</button>
+          </section>
+        </section> -->
+
+      <!-- <section id="options_container">
+        </section> -->
+
+      <section id="output_container">
+        <!-- <h3>Outputs</h3> -->
+        <ul id="output_tab_list" class="nav nav-tabs nav-justified">
+          <li class="nav-item" class="active"><a class="nav-link active" data-toggle="tab" href="#outputtab1">A</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#outputtab2">B</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#outputtab3">C</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#outputtab4">D</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#outputtab5">E</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#outputtab6">F</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="outputtab1" class="tab-pane fade in active show">
+            <textarea cols=78 rows=20 id=input
+              placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
+          </div>
+          <div id="outputtab2" class="tab-pane fade in">
+            <textarea cols=78 rows=20 id=input
+              placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
+          </div>
+          <div id="outputtab3" class="tab-pane fade in">
+            <textarea cols=78 rows=20 id=input
+              placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
+          </div>
+          <div id="outputtab4" class="tab-pane fade in">
+            <textarea cols=78 rows=20 id=input
+              placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
+          </div>
+          <div id="outputtab5" class="tab-pane fade in">
+            <textarea cols=78 rows=20 id=input
+              placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
+          </div>
+          <div id="outputtab6" class="tab-pane fade in">
+            <textarea cols=78 rows=20 id=input
+              placeholder="Generated text will appear here. Switch tabs to save and edit multiple generated texts."></textarea>
+          </div>
+        </div>
+        <button name="save_output" type="button" value="Save" id="save_button" disabled><svg class="bi bi-download"
+            width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M.5 8a.5.5 0 01.5.5V12a1 1 0 001 1h12a1 1 0 001-1V8.5a.5.5 0 011 0V12a2 2 0 01-2 2H2a2 2 0 01-2-2V8.5A.5.5 0 01.5 8z"
+              clip-rule="evenodd" />
+            <path fill-rule="evenodd"
+              d="M5 7.5a.5.5 0 01.707 0L8 9.793 10.293 7.5a.5.5 0 11.707.707l-2.646 2.647a.5.5 0 01-.708 0L5 8.207A.5.5 0 015 7.5z"
+              clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 018 1z" clip-rule="evenodd" />
+          </svg></button>
+      </section>
+
+    </section>
+    <!-- <section id="blurb_container">
+      <figure id="blurb">
+        <h2>About Markov Chains</h2>
+        <hr>
+        <p>A Markov chain is a stochastic model describing a sequence of possible events in which the probability of
+          each event
+          depends only on the state attained in the previous event. In the case of text generation, these
+          probabilities are
+          determined by word order of an input, which can be broken down into n-grams (units) of 1, 2, or 3 words.
+          <br><br>
+          For
+          the order-1
+          n-gram model, Markov text generation begins by selecting random word which begins a sentence and then
+          selects a random
+          word which followed that word, weighted by frequency of appearance: for instance, if in the input "The" is
+          followed by
+          "rhombus" thrice and "skeleton" once, there is a 75% chance the algorithm will select rhombus next and a 25%
+          chance
+          skeleton will be selected. If skeleton is selected, the word which follows skeleton in the original text
+          will appear
+          next, since skeleton appeared only once, but if rhombus is selected, then a random word which follows
+          rhombus in the
+          original passage will appear. The order 2 n-gram variant would proceed similarly, except it would start by
+          randomly
+          selecting "The rhombus" or "The skeleton" and then, if "The rhombus" was selected, randomly select a word
+          which followed
+          "The rhombus."</p>
+        <br>
+        <h2>Use in Literature</h2>
+        <hr>
+        <section id="subtitle">
+          <section id="quote_container">
+            <figure id="quotation">
+              “Unfortunately human effort, which always varies the arrangement of existing elements, cannot be
+              applied
+              to producing a
+              single new element. A landscape in which nothing terrestrial figures is beyond the scope of our
+              imagination.”
+            </figure>
+            <figcaption id="attribution">
+              — André Breton, "Max Ernst" (1921)
+            </figcaption>
+          </section>
+        </section>
+        <br>
+        <p>
+          By running multiple texts together through a Markov chain at the same time, it becomes possible to collage
+          bits of text
+          in novel, often nonsensical ways that often rebel from syntax and invert idiomatic constructions. (Software,
+          after all,
+          has no subconscious to veto awkward constructions before they arise to conscious thought.)
+          <br><br>
+          There are several
+          precedents
+          to this technique. The cut-up technique, pioneered by the Dadaists and further developed by <a
+            href="https://www.writing.upenn.edu/~afilreis/88v/burroughs-cutup.html" target=blank>William S.
+            Burroughs</a> and
+          Brion Gysin, rearranged cut-up blocks of text from multiple pages to invent a new body of text. In the
+          1980s,
+          programmers realized the parodic potential of Markov chain algorithms when applied to writing and released
+          <a href="http://catb.org/jargon/html/D/Dissociated-Press.html" target=blank>Dissociated
+            Press</a>, a plug-in for the eMacs text editor. Following in their footsteps, Jamie Zawinski released the
+          C program
+          <a href="https://www.jwz.org/dadadodo/" target=blank>dadadodo</a> which generates
+          text from an input file.
+        </p>
+        <br>
+        <h2>Markov Mutagen</h2>
+        <hr>
+        <section id="subtitle">
+          <section id="quote_container">
+            <figure id="quotation">
+              “But the marvelous abiity to reach out, without leaving the field of our experience,
+              to two distinct realities and bring them together to create a spark...and, by removing our systems
+              of reference, to disorient us within our own memories, that is what holds Dada's attention, for the time
+              being.”
+            </figure>
+            <figcaption id="attribution">
+              — André Breton, "Max Ernst" (1921)
+            </figcaption>
+          </section>
+        </section>
+        <br>
+        <p>
+          With Markov Mutagen, you can easily combine and run inputs through a Markov text generator or a simulation
+          of the cut-up
+          technique. You are encouraged to combine, edit, and collage the outputs or even recycle the output as an
+          input.
+          Cybernetic writing is an open-ended game whose procedures are still being developed and combined in new
+          ways.
+          <br><br>
+          So try
+          sampling text from a novel, news article, encyclopedia, conspiracy theory, theological treatise, or whatever
+          else
+          strikes your fancy. Try replacing a word (noun, verb, adjective) in one input with a word from another to
+          manipulate the
+          probabilities in the Markov model. The outputs of neural networks like <a href="http://talktotransformer.com/"
+            target=blank>TalkToTransformer</a> also serve well as
+          inputs. And
+          enjoy the fruits of your discordant prosody.
+        </p>
+        <hr>
+      </figure>
+    </section> -->
+    <section id="footer">
+      <section id="footer_text">
+        2020 | Python by <a href="https://github.com/coreybobco/">Corey Bobco</a> |
+        Design by <a href="https://zacharyschulte.com/">Zachary Schulte</a> <br>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
