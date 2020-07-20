@@ -17,6 +17,13 @@ async function postData(url = '', data = {}) {
     return response.json(); // parses JSON response into native JavaScript objects
 }
 
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response;
+}
+
 onload = function () {
 
     var output = document.querySelector('#output');
@@ -34,11 +41,16 @@ onload = function () {
             generate_text_button.disabled = true;
 
             postData('https://api.inferkit.com/v1/models/c4ec710e-134d-405a-9bea-85ebd50e0a84/generate', { "prompt": { "text": text_to_process }, "length": 300 })
+                .then(handleErrors)
                 .then((data) => {
                     output.innerHTML = "<strong>" + text_to_process + "</strong>" + data['data']['text'];
                     generate_text_button.disabled = false;
                     $("#output-options").show();
-                });
+                }).catch(function (error) {
+                    output.innerHTML = 'Sorry, an error occurred while generating. Please try again later.';
+                    generate_text_button.disabled = false;
+                    console.log(error);
+                });;
 
 
         }
