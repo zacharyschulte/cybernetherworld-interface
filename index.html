@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Cybernetherworld</title>
+<meta charset="UTF-8">
+<meta name="description" content="A neural network text generator trained on cosmic horror and science fiction." />
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, min-scale=1, max-scale=1, shrink-to-fit=no">
+<meta property="og:title" content="Cybernetherworld">
+<meta property="og:image" content="screenshot.png">
+<meta property="og:description" content="A neural network text generator trained on cosmic horror and science fiction.">
+<meta property="og:url" content="http://cybernetherworld.textoplasm.net/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="dom-to-image.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="index.js"></script>
+
+
+<body class="Site gradient-white">
+    <section class="mt3 mw5 mw7-ns tc center ph3-ns ">
+
+        <div class="center">
+            <h1 class="f3 f2-ns lh-title ttu mt0 tracked-tight logo">CYBERNETHERWORLD
+            </h1>
+            <blockquote class="ml0 mt0 black-90 center">
+                <p class="f6 lh-copy measure mt0 center">
+                    “The true literature machine will be one that itself feels the need to produce disorder, as a
+                    reaction
+                    against its
+                    preceding production of order: a machine that will produce avant-garde work to free its circuits
+                    when
+                    they are choked by
+                    too long a procession of classicism.”
+                </p>
+                <cite class="f6 ttu tracked fs-normal">— Italo Calvino, Cybernetics and Ghosts (1967)</cite>
+            </blockquote>
+
+        </div>
+    </section>
+
+    <section class="Site-content flex flex-wrap flex-column items-center">
+        <section class="mw6 mw7-ns bg-light-gray pa2 ma3">
+            <section class="pa2 black-80">
+                <div>
+                    <p class="f6 lh-copy measure-wide center">
+                        This neural network text generator was trained on science fiction and cosmic horror novels. It
+                        is based
+                        on GPT-2 and Adam King's Inferkit model and will continue generating text for any input with
+                        vertiginous language about undying gods, vast conspiracies, and kaleidoscopic delusions of
+                        unreliable narrators. Enjoy.
+                    </p>
+                </div>
+            </section>
+        </section>
+        <section class="mw6 mw7-ns bg-light-gray pa2">
+            <section class="pa4 black-80">
+                <div>
+                    <small id="prompt-desc" class="f6 black-60 ma1">Write your prompt here. To add a random prompt,
+                        <a id="random" class="link underline black-80 hover-blue pointer">click here</a>.</small>
+                    <textarea id="input" class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2 mt2"
+                        aria-describedby="prompt-desc"></textarea>
+                </div>
+                <button
+                    class="bg-animate link dim inline-flex items-center f3  ml3 pr2 ttu tc mt0 tracked-tight ph2 btn pointer"
+                    id="generate_text">GENERATE
+                </button>
+
+            </section>
+
+            <div id="output" class="pa3 f5 measure-wide lh-copy bg-light-gray center"><strong id="prompt"></strong>
+            </div>
+            <div id="output-options" class="mt3 mb3" style="display:none;">
+                <button
+                    class="bg-animate link dim inline-flex items-center f3  ml3 pr2 ttu tc mt0 tracked-tight ph2 btn pointer"
+                    id="continue_generation">CONTINUE GENERATION</button>
+                <button
+                    class="bg-animate link dim inline-flex items-center f3 ml3 pr2 ttu tc mt0 tracked-tight ph2 btn pointer"
+                    id="save">SAVE <svg class="dib pl2 h1 w1" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 400 400"
+                        style="enable-background:new 0 0 400 400;" xml:space="preserve">
+                        <g>
+                            <path
+                                d="M358.8,272.2v70.3c0,1.4-0.2,2.7-0.5,3.9v0c0,0,0,0,0,0c-1.4,6.9-7.5,12.1-14.7,12.1H56.3c-7.7,0-14.1-5.9-14.9-13.4   c-0.2-0.9-0.2-1.7-0.2-2.7v-70.3c0-8.3,6.8-15,15-15c4.1,0,7.9,1.7,10.6,4.4c2.7,2.7,4.4,6.5,4.4,10.6v56.3h257.7v-56.3   c0-8.3,6.8-15,15-15c4.1,0,7.9,1.7,10.6,4.4C357.1,264.3,358.8,268.1,358.8,272.2z">
+                            </path>
+                            <path
+                                d="M286.5,201.8l-73.7,73.7c-0.1,0.2-0.3,0.3-0.4,0.4c-2.7,2.7-6.2,4.4-9.7,4.9c-0.3,0-0.6,0.1-0.9,0.1   c-0.6,0.1-1.2,0.1-1.8,0.1h0l-1.7-0.1c-0.3,0-0.6-0.1-0.9-0.1c-3.6-0.5-7-2.2-9.7-4.9c-0.1-0.1-0.3-0.3-0.4-0.4l-73.7-73.7   c-3.4-3.4-5.1-7.9-5.1-12.4c0-4.5,1.7-9,5.1-12.4c6.8-6.8,17.9-6.8,24.8,0l44.3,44.3V59c0-9.6,7.9-17.5,17.5-17.5   c4.8,0,9.2,2,12.4,5.1c3.2,3.2,5.1,7.5,5.1,12.4v162.3l44.3-44.3c6.8-6.8,17.9-6.8,24.8,0C293.3,183.9,293.3,195,286.5,201.8z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </section>
+
+    <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+        <small class="f6-ns f7 db tc">2020 <br> <b class="ttl">developed by:<a href="http://coreybob.co/"
+                    class="dib ph2 link mid-gray dim">corey bobco</a> & <a href="https://zacharyschulte.com/"
+                    class="dib ph2 link mid-gray dim">zachary schulte</a>
+
+            </b></small>
+    </footer>
+
+</body>
+
+</html>

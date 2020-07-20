@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'notcouriersansregular';
+    src: url('fonts/NotCourierSans-webfont.eot');
+    src: url('fonts/NotCourierSans-webfont.eot?#iefix') format('embedded-opentype'),
+         
+         url('fonts/NotCourierSans-webfont.woff') format('woff'),
+         url('fonts/NotCourierSans-webfont.ttf') format('truetype'),
+         url('fonts/NotCourierSans-webfont.svg#notcouriersansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'notcouriersansbold';
+    src: url('fonts/NotCourierSans-Bold-webfont.eot');
+    src: url('fonts/NotCourierSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         
+         url('fonts/NotCourierSans-Bold-webfont.woff') format('woff'),
+         url('fonts/NotCourierSans-Bold-webfont.ttf') format('truetype'),
+         url('fonts/NotCourierSans-Bold-webfont.svg#notcouriersansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "MachineLearning";
+  src: 
+  url("fonts/MachineLearningFont-v2.woff2") format("woff2"),
+  url("fonts/MachineLearningFont-v2.woff2") format("woff2"),
+  url("fonts/MachineLearningFont-v2.woff2") format("opentype");
+}
+
+html body{
+  font-family: "notcouriersansregular", sans-serif;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+.gradient-white {
+     background:url(.5px .5px 1px rgb(251, 12, 12), 0px -1px 1px rgba(12, 79, 251,.5),-.5px 0px 1px rgb(52, 251, 12) repeat;
+    /* background-color: none; */
+background-image: none;
+  background: radial-gradient(
+    at center right,
+    rgba(248,253,255,1) 19%, rgb(235, 235, 235)100%
+  ); 
+}
+
+.logo, .btn{
+    background-color:#ffffff;color:black; 
+    box-shadow: .05em .05em 0 0  rgba(0, 0, 0, 100);
+}
+
+.btn:active, .btn:disabled {
+    background-color:black;color:#ffffff;
+    box-shadow: .05em .05em 0 0  rgba(255, 255, 255, 100) ;   
+}
+
+.btn:disabled {
+    cursor: wait;
+}
+
+.logo {
+  font-family: MachineLearning;
+  text-shadow: .5px .5px 1px rgb(251, 12, 12), 0px -1px 1px rgba(12, 79, 251,.5),-.5px 0px 1px rgb(52, 251, 12);
+}
+
+strong {
+  font-family: "notcouriersansbold", sans-serif;
+}
