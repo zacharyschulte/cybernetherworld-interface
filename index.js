@@ -17,13 +17,6 @@ async function postData(url = '', data = {}) {
     return response.json(); // parses JSON response into native JavaScript objects
 }
 
-function handleErrors(response) {
-    if (!response.ok) {
-        throw Error(response.statusText);
-    }
-    return response;
-}
-
 onload = function () {
 
     var output = document.querySelector('#output');
@@ -41,17 +34,16 @@ onload = function () {
             generate_text_button.disabled = true;
 
             postData('https://api.inferkit.com/v1/models/c4ec710e-134d-405a-9bea-85ebd50e0a84/generate', { "prompt": { "text": text_to_process }, "length": 300 })
-                .then(handleErrors)
+
                 .then((data) => {
                     output.innerHTML = "<strong>" + text_to_process + "</strong>" + data['data']['text'];
                     generate_text_button.disabled = false;
                     $("#output-options").show();
-                }).catch(function (error) {
-                    output.innerHTML = 'Sorry, an error occurred while generating. Please try again later.';
+                }).catch((error) => {
+                    console.error('Error:', error);
+                    output.innerHTML = "Sorry, an error occurred. Please try again later."
                     generate_text_button.disabled = false;
-                    console.log(error);
-                });;
-
+                });
 
         }
     };
@@ -67,6 +59,10 @@ onload = function () {
             postData('https://api.inferkit.com/v1/models/c4ec710e-134d-405a-9bea-85ebd50e0a84/generate', { "prompt": { "text": text_to_process }, "length": 300 })
                 .then((data) => {
                     $("#output").append(data['data']['text']);
+                    continue_generation_button.disabled = false;
+                }).catch((error) => {
+                    console.error('Error:', error);
+                    output.innerHTML = "Sorry, an error occurred. Please try again later."
                     continue_generation_button.disabled = false;
                 });
         }
@@ -86,7 +82,7 @@ onload = function () {
         $("#input").val(rand(phrases));
     });
 
-    var phrases = ['Crowds of vile decapods butcher', 'A mile above the horizon of Chaos there resounds a mighty howl', 'The Great Pyramid overflowed with blood, imbuing all', 'In utter cruelty the Grand Daimon', 'The masses began chanting with riotous shouts', 'The murmuring chorus of disembodied voices', 'The planets we survey are mere outlines of an unreal plane beyond', 'An unnatural laughter echoes in the Garden of', 'A scarlet maelstrom buries', 'Unutterable filth floods the Necropolis', 'Phantom forms scurry to and fro below the horizon', 'Conflagrant fissures of jagged granite illumine the central pathway to the'];
+    var phrases = ['Crowds of vile decapods butcher', 'A mile above the horizon of Chaos there resounds a mighty howl', 'The Great Pyramid overflowed with blood, imbuing all', 'In utter cruelty the Grand Daimon', 'The masses began chanting with riotous shouts', 'The murmuring chorus of disembodied voices', 'Our grotesque egregore vanquished', 'An unnatural laughter echoes in the Garden of', 'A scarlet maelstrom buries', 'Unutterable filth floods the Necropolis', 'Phantom forms scurry to and fro below the horizon', 'Conflagrant fissures of jagged granite illumine the central pathway to the'];
 
 
     function saveOutput() {
